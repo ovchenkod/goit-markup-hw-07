@@ -49,16 +49,12 @@ margin: 0;
 /*------ HEADER ---------*/
 
 .header-nav {
+    display: flex;
+    align-items: center;
 padding-top: 24px;
 padding-bottom: 24px;
 }
 
-.header-nav {
-display: flex;
-align-items: center;
-justify-content: space-between;
-    /* margin-right: auto; */
-}
 
 .logo {
 font-family: 'Raleway';
@@ -70,8 +66,8 @@ text-decoration: none;
 text-transform:  uppercase;
 font-size: 18px;
 line-height: 1.14;
-display: flex;
-align-items: center;
+/* display: flex;
+align-items: center; */
     }
 
 .logo-second {
@@ -250,22 +246,17 @@ fill: #F4F4FD;;
 background-color:  #404BBF;
     }
 
+ 
+    
+
     /*--------- SECTION HERO ----------- */
  
 .hero {
 margin: 0;
-padding-top: 112px; 
-padding-bottom: 240px;
-background-color: var(--primery-text-color);
 text-align: center;
-max-width: 428px;
-height: 432px;
+width: 100%;
 margin-left: auto;
 margin-right: auto;
-background-image: linear-gradient( to right, 
-var(--hero-background-rgba), 
-var(--hero-background-rgba) ),
-url(/images/hero-mob-1.jpg);
 background-position: center;
 background-repeat: no-repeat;
         }
@@ -317,7 +308,28 @@ outline: none;
 background-color: #fff;
 color: #4D5AE5;
             }
-        
+
+.site-nav {
+    display: flex;
+    text-decoration: none;
+}
+
+.auth-nav .link {
+font-family: inherit;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.04em;
+color: #434455;
+text-decoration: none;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+color: blue;
+ }
+
+    
             /* --------SECTION BOX --------*/
   
 .title-none {
@@ -342,9 +354,7 @@ padding-bottom: 95px;
 
 .box-title {
     /* padding-top: 95px; */
-min-width: 396px;
 margin: 0;
-width: 264px;
 font-family: inherit;
 color: var(--primery-text-color);
 font-weight: 600;
@@ -363,7 +373,10 @@ font-size: 16px;
 line-height: 1.2;
     }
 
-
+    /* .header-main {
+        display: flex;
+        align-items: center;
+    } */
 
 @media screen and (max-width: 1220px) {
     .box-text {
@@ -376,60 +389,95 @@ display: none;
 
 .icon-item {
 display: none;
-            }
-                
-           
+            }   
         
 }
 
 
 @media screen and (max-width: 720px) {
-    .auth-nav {
-        display: none;
-    }
-    
-    .site-nav {
-        display: none;
-    }
- 
+  
 }
 
 @media screen and (max-width: 480px) {
+    .header-nav {
+        display: flex;
+        justify-content: space-between;}
+
+    .auth-nav {
+        display: none;
+    }
+
+    .site-nav {
+        display: none;
+    } 
+
+    .hero {
+padding-top: 112px; 
+padding-bottom: 240px;
+height: 432px;
+background-color: var(--primery-text-color);
+background-image: linear-gradient( to right, 
+var(--hero-background-rgba), 
+var(--hero-background-rgba) ),
+url(/images/hero-mob-1.jpg);
+}
 
 }
-              /*======= MOBILE =======*/
-@media screen and (min-width: 480px) and (max-width: 740px) {
-.box-item {
-    margin-bottom: 72px;
-}   
 
-.box-item:last-child {
-    margin-bottom: 0;
-  }
+@media screen and (maxdevice-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and   (min-resolution: 2dppx) {} 
 
-}
 
-             /* =========TABLET=========== */
-@media screen and (min-width: 740px) and (max-width: 1199px) {
-  
-     
-        
-  
-    /* 
-.site-nav .link:hover,
-.site-nav .link:focus {
-color: blue;
- /* } */
+              /*======= TABLET =======*/
+@media screen and (min-width: 481px) and (max-width: 740px) 
+{  
+    .site-nav {
+padding-left: 124px;
+gap: 40px;}
 
+.site-nav .item:last-child {
+margin-right: 0;
+            }
+
+            
+  .auth-nav {
+    display: block;
+    }
+ 
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 203px;
+    height: 435px;
+    background-image: linear-gradient( to right, 
+    var(--hero-background-rgba), 
+    var(--hero-background-rgba) ),
+    url(/images/hero-tab-1.jpg);
+    background-color: var(--primery-text-color);
+    }
+
+    .box-item {
+        margin-bottom: 72px;
+    }   
     
+    .box-item:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+             /* ===========DESK========= */
+@media screen and (min-width: 740px) and (max-width: 1199px) {
+  .container 
+
+
+.hero-title {
+    max-width: 1220px;
+    font-size: 36px;
+    line-height: 1.07;}
+
 }
 
 @media screen and (min-width: 480px) {
-    .container {
-        width: 430px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     .mob-menu-btn {
         display: none;
@@ -438,34 +486,23 @@ color: blue;
 
 @media screen and (min-width: 720px) {
     .container {
-        width: 720px;
+        width: 760px;
     }
-    .hero{
-        max-width: 1440px;
-        height: 600px;
-        padding-top: 188px; 
-        padding-bottom: 188px;
-    }
-
-    .hero-title {
-        max-width: 1220px;
-        font-size: 36px;
-        line-height: 1.07;
-    }
+ 
 
     .box-title {
         width: 264px;
        }
 
-       .site-nav {
-        display: flex;
-       }
+ 
 }
 
 @media screen and (min-width: 1220px) {
     .container {
 width: 1220px;}
-    
+
+   
+
 .box {
     /* padding-top: 120px; */
     display: flex;
