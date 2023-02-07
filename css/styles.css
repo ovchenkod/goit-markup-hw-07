@@ -49,7 +49,7 @@ margin: 0;
 /*------ HEADER ---------*/
 
 .header-nav {
-    display: flex;
+ display: flex;
     align-items: center;
 padding-top: 24px;
 padding-bottom: 24px;
@@ -384,11 +384,14 @@ line-height: 1.2;
     }
 
 .header-main {
-        display: flex;
+        /* display: flex; */
         align-items: center;
     } 
 
 @media screen and (max-width: 1220px) {
+    .container {
+        width: 1220px;
+    }
     .box-text {
         font-weight: 400;
         }
@@ -405,10 +408,16 @@ display: none;
 
 
 @media screen and (max-width: 720px) {
-  
+  .container {
+    width: 720px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+.container {
+    /* width: 480px; */
+}
+
     .header-nav {
         display: flex;
         justify-content: space-between;}
@@ -448,46 +457,12 @@ screen and   (min-resolution: 2dppx) {}
 
 
               /*======= TABLET =======*/
-@media screen and (min-width: 481px) and (max-width: 740px) 
+              /* @media screen and (min-width: 481px) and (max-width: 740px)  */
+@media screen and (min-width: 721px) and (max-width: 1199px) 
 {  .container {
-width: 720px;
+width: ;
 }
-    .site-nav {
-padding-left: 124px;
-gap: 40px;}
 
-.site-nav .item:last-child {
-margin-right: 0;
-            }
-         
-.auth-nav {
-display: block;
-padding-left: 115px;
-    }
- 
-  .hero {
-    padding-top: 112px;
-    padding-bottom: 203px;
-    width: 720px;
-    height: 435px;
-    background-image: linear-gradient( to right, 
-    var(--hero-background-rgba), 
-    var(--hero-background-rgba) ),
-    url(/images/hero-tab-1.jpg);
-    background-color: var(--primery-text-color);
-    }
-
-    .box {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        row-gap: 72px;
-        text-align: left;
-    }
-
-    .box-item {
-    width: calc((100% - 24px) / 2)
-    }
 
     }
 
@@ -504,18 +479,55 @@ padding-left: 115px;
 }
 
 @media screen and (min-width: 480px) {
-
+.container {
+    min-width: 720px;
+}
     .mob-menu-btn {
         display: none;
     }
-    
+    .site-nav {
+        padding-left: 124px;
+        gap: 40px;}
+        
+        .site-nav .item:last-child {
+        margin-right: 0;
+                    }
+                 
+        .auth-nav {
+        display: block;
+        padding-left: 195px;
+            }
+         
+          .hero {
+            padding-top: 112px;
+            padding-bottom: 203px;
+            /* width: 720px; */
+            height: 435px;
+            background-image: linear-gradient( to right, 
+            var(--hero-background-rgba), 
+            var(--hero-background-rgba) ),
+            url(/images/hero-tab-1.jpg);
+            background-color: var(--primery-text-color);
+            }
+        
+            .box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                row-gap: 72px;
+                text-align: left;
+            }
+        
+            .box-item {
+            width: calc((100% - 24px) / 2)
+            }
 }
 
 @media screen and (min-width: 720px) {
-    .container {
-    
+    /* .container .header-main {
+    margin: 0;
     }
- 
+  */
 
     .box-title {
         width: 264px;
@@ -526,7 +538,7 @@ padding-left: 115px;
 
 @media screen and (min-width: 1220px) {
     .container {
-width: 1220px;}
+min-width: 1220px;}
 
    
     
